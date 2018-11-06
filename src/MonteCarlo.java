@@ -10,18 +10,26 @@ public class MonteCarlo{
         //GameSimulate(1000);
         //GameSimulate(1000000);
 
-        //int[] oddNumbers = {1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,36};
-        //String red = String.valueOf(oddNumbers);
-        //String red = "Red";
-
-
-        //int[] oddNumbers = {1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,36};
-        //int[] red = oddNumbers;
-
-        System.out.println(oddNumbers);
+        System.out.println();
 
     }
-    public void GameSimulate (int spins){
+    public void GameSimulator (int games){
+
+        String[] rouletteNumbers = new String[37];
+
+        for(int i = 0; i < rouletteNumbers.length; i++){
+            if (i % 2 == 0);
+            {
+                rouletteNumbers[i] = "Red";
+            }
+            else
+                {
+
+                rouletteNumbers[i] = "Black";
+            }
+
+
+        }
         /*
         int blackTotal = 0;
         int blackCurrentStreak = 0;
