@@ -39,8 +39,9 @@ public class MonteCarlo {
                 } else {
                     totalRed++;
                 }
-
-            else{
+            }
+            else
+                {
                     if (randomNumber >= 1 && randomNumber <= 10 || randomNumber >= 19 && randomNumber <= 28) {
                         totalRed++;
                     } else {
@@ -56,7 +57,7 @@ public class MonteCarlo {
 
         }
     }
-}
+
 
 
 
