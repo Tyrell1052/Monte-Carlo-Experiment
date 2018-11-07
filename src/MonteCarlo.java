@@ -1,22 +1,16 @@
-import java.util.*;
+import java.util.Random;
 
 public class MonteCarlo{
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
-        GameSimulator(10);
+        // number min and max
+        //int max = 37;
+        //int min = 1;
 
-        //GameSimulator test = new GameSimulator(1);
-        //GameSimulate(1000);
-        //GameSimulate(1000000);
-
-        //System.out.println();
-
-    }
-    public static void GameSimulator (int games){
-
+        int numberSpins = 0;
         int totalBlack = 0;
-        int urrentBlackStreak = 0;
+        int currentBlackStreak = 0;
         int maxBlackStreak = 0;
         int totalRed = 0;
         int currentRedStreak = 0;
@@ -25,33 +19,41 @@ public class MonteCarlo{
         int currentGreenStreak = 0;
         int maxGreenStreak = 0;
 
-        String[] rouletteNumbers = new String[37];
 
-        for(int i = 0; i < rouletteNumbers.length; i++){
-            if (i % 2 == 0)
-            {
-                rouletteNumbers[i] = "Red";
-            }
-            else{
+        Random randomNum = new Random();
+        int count = 0;
+        while (count <= 100){
 
-                rouletteNumbers[i] = "Black";
-            }
-
-        //System.out.print(rouletteNumbers[i]);
-
-        for(int ){
+            count = randomNum.nextInt(36) + 1;
+            System.out.println(count);
+        count ++;
 
         }
-        /*
-        int blackTotal = 0;
-        int blackCurrentStreak = 0;
-        int blackMaxStreak = 0;
-        int redTotal = 0;
-        int redCurrentStreak = 0;
-        int redMaxStreak = 0;
-        int greenTotal = 0;
-        int greenCurrentStreak = 0;
-        int greenMaxStreak = 0;
+
+
+        String[] rouletteNumbers = new String[37];
+
+        for(int i = 0; i < rouletteNumbers.length; i++) {
+            if (i % 2 == 0) {
+                rouletteNumbers[i] = "Black";
+                totalBlack ++ ;
+                //System.out.println(totalBlack);
+
+            } else {
+
+                rouletteNumbers[i] = "Red";
+                totalRed ++;
+                //System.out.println(totalRed);
+            }
+
+            //System.out.println(rouletteNumbers[i]);
+
+
+        }
+    }
+}
+
+ /*
 
         for (int i=1; i <= spins; i++){
 
@@ -68,16 +70,18 @@ public class MonteCarlo{
                 }
                 if (greenCurrentStreak < greenMaxStreak){
                     Do same thing as red did
-                }
+
+               -------------------------
+                    String[] rouletteNumbers = new String[37];
+
+        for(int i = 0; i < rouletteNumbers.length; i++) {
+            if (i % 2 == 0) {
+                rouletteNumbers[i] = "Red";
+            } else {
+
+                rouletteNumbers[i] = "Black";
             }
-            if (if red) {
-                Do same as black
-            }
-            if (if green) {
-                Do same as black
-            }
-        Print results;
-        }
+
+            System.out.println(rouletteNumbers[i]);
+
          */
-    }
-}
