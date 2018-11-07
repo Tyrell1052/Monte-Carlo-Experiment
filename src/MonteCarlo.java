@@ -18,13 +18,14 @@ public class MonteCarlo{
         int totalGreen = 0;
         int currentGreenStreak = 0;
         int maxGreenStreak = 0;
+        int randomNumber = 0;
 
 
         Random randomNum = new Random();
         int count = 0;
         while (count <= 100){
 
-            count = randomNum.nextInt(36) + 1;
+            randomNumber = randomNum.nextInt(36) + 1;
             System.out.println(count);
         count ++;
 
