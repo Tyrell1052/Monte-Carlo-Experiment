@@ -8,6 +8,7 @@ public class MonteCarlo{
         //int max = 37;
         //int min = 1;
 
+        // setting variables
         int numberSpins = 0;
         int totalBlack = 0;
         int currentBlackStreak = 0;
@@ -21,29 +22,31 @@ public class MonteCarlo{
         int randomNumber = 0;
 
 
+        // using random class to generate the random numbers
         Random randomNum = new Random();
-        int count = 0;
-        while (count <= 100){
+        int count = 0; // setting sound to 0
+        while (count <= 100){ // while logic for conditional statement
 
-            randomNumber = randomNum.nextInt(36) + 1;
-            System.out.println(count);
-        count ++;
+            randomNumber = randomNum.nextInt(36) + 1;// this will choose random number between 0 and 36
+            //System.out.println(randomNumber);
+        count ++;// adds 1 to the count at the end of the while loop
 
         }
 
 
-        String[] rouletteNumbers = new String[37];
+        String[] rouletteNumbers = new String[37]; // creating empty string with a total of 37 indexes
 
-        for(int i = 0; i < rouletteNumbers.length; i++) {
-            if (i % 2 == 0) {
-                rouletteNumbers[i] = "Black";
-                totalBlack ++ ;
+        for(int i = 0; i < rouletteNumbers.length; i++) {//this sets i to 0 - the for loop will,
+            //count from i to the length of rouletteNumbers
+            if (i % 2 == 0) { // this will determine if the number is odd or even by using modulus division
+                rouletteNumbers[i] = "Black";// if even get the the sting "Black"
+                totalBlack ++ ; // add 1 to the totalBlack variable
                 //System.out.println(totalBlack);
 
             } else {
 
-                rouletteNumbers[i] = "Red";
-                totalRed ++;
+                rouletteNumbers[i] = "Red";// if even get the the sting "Red"
+                totalRed ++;// add 1 to the totalRed variable
                 //System.out.println(totalRed);
             }
 
