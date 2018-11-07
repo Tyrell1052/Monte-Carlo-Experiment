@@ -1,61 +1,64 @@
 import java.util.Random;
 
-public class MonteCarlo{
+public class MonteCarlo {
 
     public static void main(String[] args) {
 
-        // number min and max
-        //int max = 37;
-        //int min = 1;
 
         // setting variables
-        int numberSpins = 0;
+        //int numberSpins = 0;
         int totalBlack = 0;
-        int currentBlackStreak = 0;
-        int maxBlackStreak = 0;
+        //int currentBlackStreak = 0;
+        //int maxBlackStreak = 0;
         int totalRed = 0;
-        int currentRedStreak = 0;
-        int maxRedStreak = 0;
         int totalGreen = 0;
-        int currentGreenStreak = 0;
-        int maxGreenStreak = 0;
+        //int currentRedStreak = 0;
+        //int maxRedStreak = 0;
+        int currentOddStreak = 0;
+        int maxOddStreak = 0;
+        int currentEvenStreak = 0;
+        int maxEvenStreak = 0;
         int randomNumber = 0;
 
 
         // using random class to generate the random numbers
         Random randomNum = new Random();
         int count = 0; // setting sound to 0
-        while (count <= 100){ // while logic for conditional statement
+        while (count <= 100) { // while logic for conditional statement
+            randomNumber = randomNum.nextInt(37);// this will choose random number between 0 and 36
 
-            randomNumber = randomNum.nextInt(36) + 1;// this will choose random number between 0 and 36
-            //System.out.println(randomNumber);
-        count ++;// adds 1 to the count at the end of the while loop
-
-        }
-
-
-        String[] rouletteNumbers = new String[37]; // creating empty string with a total of 37 indexes
-
-        for(int i = 0; i < rouletteNumbers.length; i++) {//this sets i to 0 - the for loop will,
-            //count from i to the length of rouletteNumbers
-            if (i % 2 == 0) { // this will determine if the number is odd or even by using modulus division
-                rouletteNumbers[i] = "Black";// if even get the the sting "Black"
-                totalBlack ++ ; // add 1 to the totalBlack variable
-                //System.out.println(totalBlack);
-
-            } else {
-
-                rouletteNumbers[i] = "Red";// if even get the the sting "Red"
-                totalRed ++;// add 1 to the totalRed variable
-                //System.out.println(totalRed);
+            if (randomNumber == 0) {// if statement for landing on Green
+                totalGreen++;
+                count++;
+                continue;
             }
 
-            //System.out.println(rouletteNumbers[i]);
+            if (randomNumber % 2 == 0) {
+                if (randomNumber >= 1 && randomNumber <= 10 || randomNumber >= 19 && randomNumber <= 28) {
+                    totalBlack++;
+                } else {
+                    totalRed++;
+                }
+
+            else{
+                    if (randomNumber >= 1 && randomNumber <= 10 || randomNumber >= 19 && randomNumber <= 28) {
+                        totalRed++;
+                    } else {
+                        totalBlack++;
+                    }
+                }
+
+                System.out.println(randomNumber);
+                count++;// adds 1 to the count at the end of the while loop
+
+            }
 
 
         }
     }
 }
+
+
 
  /*
 
@@ -88,4 +91,27 @@ public class MonteCarlo{
 
             System.out.println(rouletteNumbers[i]);
 
+--------------------------------------------------------------------
+String[] rouletteNumbers = new String[37]; // creating empty string with a total of 37 indexes
+
+        for(int i = 0; i < rouletteNumbers.length; i++) {//this sets i to 0 - the for loop will,
+            //count from i to the length of rouletteNumbers
+            if (i % 2 == 0) { // this will determine if the number is odd or even by using modulus division
+                rouletteNumbers[i] = "Black";// if even set the the sting "Black"
+                totalBlack ++ ; // add 1 to the totalBlack variable
+                //System.out.println(totalBlack);
+
+            } else {
+
+                rouletteNumbers[i] = "Red";// if even set the the sting "Red"
+                totalRed ++;// add 1 to the totalRed variable
+                //System.out.println(totalRed);
+            }
+
+            //System.out.println(rouletteNumbers[i]);
+
+
+        }
+
          */
+
