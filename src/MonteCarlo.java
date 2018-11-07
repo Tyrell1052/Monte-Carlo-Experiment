@@ -4,30 +4,42 @@ public class MonteCarlo{
 
     public static void main(String[] args){
 
+        GameSimulator(10);
 
-
-        //GameSimulate(100);
+        //GameSimulator test = new GameSimulator(1);
         //GameSimulate(1000);
         //GameSimulate(1000000);
 
-        System.out.println();
+        //System.out.println();
 
     }
-    public void GameSimulator (int games){
+    public static void GameSimulator (int games){
+
+        int totalBlack = 0;
+        int urrentBlackStreak = 0;
+        int maxBlackStreak = 0;
+        int totalRed = 0;
+        int currentRedStreak = 0;
+        int maxRedStreak = 0;
+        int totalGreen = 0;
+        int currentGreenStreak = 0;
+        int maxGreenStreak = 0;
 
         String[] rouletteNumbers = new String[37];
 
         for(int i = 0; i < rouletteNumbers.length; i++){
-            if (i % 2 == 0);
+            if (i % 2 == 0)
             {
                 rouletteNumbers[i] = "Red";
             }
-            else
-                {
+            else{
 
                 rouletteNumbers[i] = "Black";
             }
 
+        //System.out.print(rouletteNumbers[i]);
+
+        for(int ){
 
         }
         /*
