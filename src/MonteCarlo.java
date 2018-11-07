@@ -6,19 +6,19 @@ public class MonteCarlo {
 
 
         // setting variables
-        //int numberSpins = 0;
+
+        // variable for the random number
+        int randomNumber = 0;
+
+        // total black, red and green
         int totalBlack = 0;
-        //int currentBlackStreak = 0;
-        //int maxBlackStreak = 0;
         int totalRed = 0;
         int totalGreen = 0;
-        //int currentRedStreak = 0;
-        //int maxRedStreak = 0;
-        int currentOddStreak = 0;
-        int maxOddStreak = 0;
-        int currentEvenStreak = 0;
+        // variables for odds and evens
+        int currentEvenCount = 0;
         int maxEvenStreak = 0;
-        int randomNumber = 0;
+        int currentOddCount = 0;
+        int maxOddStreak = 0;
 
 
         // using random class to generate the random numbers
@@ -34,29 +34,56 @@ public class MonteCarlo {
             }
 
             if (randomNumber % 2 == 0) {
-                if (randomNumber >= 1 && randomNumber <= 10 || randomNumber >= 19 && randomNumber <= 28) {
+                if (randomNumber >= 1 && randomNumber <= 10 || randomNumber >= 19 && randomNumber <= 28){
                     totalBlack++;
-                } else {
+                }
+                else
+                {
                     totalRed++;
                 }
-            }
-            else
+            }else{
+                if (randomNumber >= 1 && randomNumber <= 10 || randomNumber >= 19 && randomNumber <= 28) {
+                    totalRed++;
+                }
+                else
                 {
-                    if (randomNumber >= 1 && randomNumber <= 10 || randomNumber >= 19 && randomNumber <= 28) {
-                        totalRed++;
-                    } else {
-                        totalBlack++;
-                    }
+                    totalBlack++;
+                }
+            }
+
+            //System.out.println(randomNumber);
+            //count++;// adds 1 to the count at the end of the while loop
+            if (randomNumber % 2 == 0);{
+
+                currentEvenCount++;
+
+                if (currentEvenCount > maxEvenStreak) {
+                    maxEvenStreak = currentEvenCount;
+
+                }
+                else
+                {
+                    currentOddCount = 0;
                 }
 
-                System.out.println(randomNumber);
-                count++;// adds 1 to the count at the end of the while loop
+            }else{
+
+                currentOddCount++;
+                if (currentOddCount > maxOddStreak) {
+                    maxOddStreak = currentOddCount;
+                }
+                else
+                {
+                    currentEvenCount = 0;
+                }
+
 
             }
 
 
         }
     }
+}
 
 
 
