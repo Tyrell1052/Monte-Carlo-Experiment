@@ -24,10 +24,10 @@ public class MonteCarlo {
         Random randomNum = new Random();
         int randomNumber;
         int count = 0; // setting sound to 0
-        while (count <= 10) { // while logic for conditional statement
+        while (count < 10) { // while logic for conditional statement
             //int randomNumber;
             randomNumber = randomNum.nextInt(37);// this will choose random number between 0 and 36
-            //if statement to determine is the number is odd or even and add
+            //if statement to determine is the number is odd or even
             if (randomNumber == 0) {// if statement for landing on Green
                 totalGreen++;
                 count++;
@@ -62,11 +62,13 @@ public class MonteCarlo {
 
                 if (currentEvenCount > maxEvenStreak) {
                     maxEvenStreak = currentEvenCount;
+                    count++;
 
                 }
                 else
                 {
                     currentOddCount = 0;
+                    count++;
                 }
 
             }else{
@@ -74,10 +76,12 @@ public class MonteCarlo {
                 currentOddCount++;
                 if (currentOddCount > maxOddStreak) {
                     maxOddStreak = currentOddCount;
+                    count++;
                 }
                 else
                 {
                     currentEvenCount = 0;
+                    count++;
                 }
 
 
