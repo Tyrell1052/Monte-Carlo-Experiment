@@ -1,7 +1,6 @@
 import java.util.Random;
 
-public class MonteCarlo {
-
+public class MonteCarloOneMil {
     public static void main(String[] args) {
 
 
@@ -24,7 +23,7 @@ public class MonteCarlo {
         Random randomNum = new Random();
         int randomNumber;
         int count = 0; // setting sound to 0
-        while (count <= 99) { // 99 is set for the max count because to count the 0 index would make 100 total spins.
+        while (count <= 999999) { // 999,999 is set for the max count because to count the 0 index would make 1,000,000 total spins.
             //this number also matches the totals of adding the occurrences in each of the five outputs.
             //int randomNumber;
             randomNumber = randomNum.nextInt(37);// this will choose random number between 0 and 36
@@ -98,4 +97,3 @@ public class MonteCarlo {
         System.out.println("The longest streak of odd numbers:" + maxOddStreak);
     }
 }
-
